@@ -1,13 +1,16 @@
-const imagens = document.getElementsByClassName('secundario__imagem');
+const elementosEsquerda = document.getElementsByClassName('esquerda');
+const elementosDireita = document.getElementsByClassName('direita');
+const containers = document.getElementsByClassName('secundario');
 
 document.addEventListener('scroll', () => {
-    var scrollTop = document.documentElement.scrollTop;
-    for (var i = 0; i < imagens.length; i++) {
-        var distTopo = imagens[i].getBoundingClientRect().top;
-        if (distTopo < 500) {
-            imagens[i].classList.add('naTela');
+    for (var i = 0; i < containers.length; i++) {
+        var distTopo = containers[i].getBoundingClientRect().top;
+        if (distTopo < 200) {
+            elementosEsquerda[i].classList.add('naTela');
+            elementosDireita[i].classList.add('naTela');
         } else {
-            imagens[i].classList.remove('naTela');
+            elementosEsquerda[i].classList.remove('naTela');
+            elementosDireita[i].classList.remove('naTela');
         }
     }
 })
