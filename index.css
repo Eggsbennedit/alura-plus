@@ -70,6 +70,20 @@ body {
 .secundario__imagem {
     width: 80%;
 }
+.esquerda{
+    transform: translateX(-30%);
+    opacity: 0;
+    transition: transform 0.75s ease-in, opacity 0.75s ease;
+}
+.direita{
+    transform: translateX(30%);
+    opacity: 0;
+    transition: transform 0.75s ease-in, opacity 0.75s ease;
+}
+.naTela{
+    transform: translateX(0);
+    opacity: 1;
+}
 
 .secundario {
     align-items: center;
